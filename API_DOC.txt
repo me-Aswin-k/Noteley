@@ -1,0 +1,13 @@
+schema:User
+fields:username,email,password
+
+======API for creating user
+
+    url:http://127.0.0.1:8000/api/register/
+    method:post
+    body:{
+        "username":"user name",
+        "email":"user email",
+        "password":"password",
+        "phone":"phone"
+    }
