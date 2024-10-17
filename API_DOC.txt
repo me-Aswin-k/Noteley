@@ -1,13 +1,55 @@
 schema:User
 fields:username,email,password
 
-======API for creating user
+======API for creating user========
 
     url:http://127.0.0.1:8000/api/register/
     method:post
     body:{
         "username":"user name",
         "email":"user email",
-        "password":"password",
+        "password1":"password",
+        "password2":"confirm_password",
         "phone":"phone"
     }
+
+
+
+
+schema:Task
+fields: title,description,status,created_date,owner,category,priority,is_active
+
+=====API for adding Task==========
+
+   url:http://127.0.0.1:8000/api/tasks/
+    method:post
+    body:{
+        "title":"title",
+        "description":"description",
+        "status":"status",
+        "category":"category",
+        "priority":"priority"
+    }
+
+
+
+
+=====API for Listing tasks============
+
+    url:http://127.0.0.1:8000/api/tasks/
+    method:get
+    authorization:basic
+
+
+
+
+======== API for task Summary ======
+
+
+
+
+
+
+======= API for Listing categories======
+
+url: http://127.0.0.1:8000/api/tasks/categories/
